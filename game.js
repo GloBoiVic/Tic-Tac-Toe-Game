@@ -1,3 +1,7 @@
+// TODO
+// Add Ai player
+// Update styles
+
 // DOM Elements
 const cellElements = document.querySelectorAll('[data-cell]');
 const board = document.getElementById('board');
