@@ -1,3 +1,13 @@
+// DOM Elements
+const cellElements = document.querySelectorAll('[data-cell]');
+const board = document.getElementById('board');
+const winningMessageElement = document.getElementById('winningMessage');
+const winningMessageTextElement = document.querySelector(
+  '[data-winning-message-text'
+);
+const restartButton = document.getElementById('restartButton');
+
+// Game variables
 const X_CLASS = 'x';
 const CIRCLE_CLASS = 'circle';
 const WINNING_COMBINATIONS = [
@@ -10,13 +20,6 @@ const WINNING_COMBINATIONS = [
   [0, 4, 8],
   [2, 4, 6],
 ];
-const cellElements = document.querySelectorAll('[data-cell]');
-const board = document.getElementById('board');
-const winningMessageElement = document.getElementById('winningMessage');
-const winningMessageTextElement = document.querySelector(
-  '[data-winning-message-text'
-);
-const restartButton = document.getElementById('restartButton');
 let circleTurn;
 
 startGame();
@@ -86,7 +89,7 @@ function swapTurns() {
 }
 
 function setBoardHoverClass() {
-  // remove all classes
+  // remove all classes if they exist
   board.classList.remove(X_CLASS);
   board.classList.remove(CIRCLE_CLASS);
 
